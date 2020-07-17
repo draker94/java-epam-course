@@ -1,0 +1,11 @@
+﻿#############
+## Idea
+#############
+target/
+.idea/
+.idea
+.repository/
+*.class
+*.jar
+*.ear
+
