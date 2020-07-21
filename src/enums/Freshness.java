@@ -1,4 +1,4 @@
-package flowers.enums;
+package enums;
 
 public enum Freshness {
 

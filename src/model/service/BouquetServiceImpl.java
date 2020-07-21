@@ -1,8 +1,8 @@
-package flowers.model.service;
+package model.service;
 
-import flowers.domain.Bouquet;
-import flowers.domain.florets.Flowers;
-import flowers.domain.florets.FlowersComparator;
+import domain.Bouquet;
+import domain.florets.Flowers;
+import domain.florets.FlowersComparator;
 
 import java.util.Arrays;
 

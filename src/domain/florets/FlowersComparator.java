@@ -1,4 +1,4 @@
-package flowers.domain.florets;
+package domain.florets;
 
 import java.util.Comparator;
 

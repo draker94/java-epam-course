@@ -1,6 +1,6 @@
-package flowers.model.service;
+package model.service;
 
-import flowers.domain.Bouquet;
+import domain.Bouquet;
 
 public interface BouquetService {
 

@@ -1,6 +1,6 @@
-package flowers.domain.florets;
+package domain.florets;
 
-import flowers.enums.Freshness;
+import enums.Freshness;
 
 public class Peony extends Flowers {
 

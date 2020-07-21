@@ -1,11 +1,9 @@
-package flowers;
-
-import flowers.console.PrintBouquet;
-import flowers.domain.*;
-import flowers.model.reader.LoadData;
-import flowers.model.reader.LoadDataFakeImpl;
-import flowers.model.service.BouquetService;
-import flowers.model.service.BouquetServiceImpl;
+import console.PrintBouquet;
+import domain.Bouquet;
+import model.reader.LoadData;
+import model.reader.LoadDataFakeImpl;
+import model.service.BouquetService;
+import model.service.BouquetServiceImpl;
 
 
 public class Runnable {
@@ -21,6 +19,6 @@ public class Runnable {
         PrintBouquet.print(bouquet);
         System.out.println();
 
-        service.findFlowerByStem(bouquet, 30, 50);
+        service.findFlowerByStem(bouquet, 35, 50);
     }
 }

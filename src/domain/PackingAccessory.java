@@ -1,4 +1,4 @@
-package flowers.domain;
+package domain;
 
 public class PackingAccessory {
 

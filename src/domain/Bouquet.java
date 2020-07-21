@@ -1,7 +1,7 @@
-package flowers.domain;
+package domain;
 
-import flowers.domain.florets.Flowers;
-import flowers.domain.florets.FlowersComparator;
+import domain.florets.Flowers;
+import domain.florets.FlowersComparator;
 
 import java.util.Arrays;
 
@@ -20,6 +20,10 @@ public class Bouquet {
                 f.setInBouquet(true);
                 this.price += f.getCost();
             }
+        }
+        else {
+            System.out.println("Во время сборки букета произошла ошибка :c");
+            throw new UnsupportedOperationException();
         }
     }
 
@@ -51,7 +55,7 @@ public class Bouquet {
          boolean allOk = true;
          if (flowers.length < accessory.getMinCapacity() || flowers.length > accessory.getMaxCapacity()) {
              System.out.println(String.format("Вы выбрали упаковочный аксессуар неподходящего размера." +
-                     "В данную упаковку влазит от %d до %d цветов", accessory.getMinCapacity(), accessory.getMaxCapacity()));
+                     "В данную упаковку помещается от %d до %d цветов", accessory.getMinCapacity(), accessory.getMaxCapacity()));
              allOk = false;
          }
          if(accessory.isUse()) {
@@ -60,7 +64,7 @@ public class Bouquet {
          }
          for (Flowers f : flowers) {
              if (f.isInBouquet()) {
-                 System.out.println("Цветок уже в другом букете, так не пойдёт! Удалите из заготовки букета: " + f +System.lineSeparator());
+                 System.out.println("Цветок уже в другом букете, так не пойдёт! Удалите из заготовки букета: " + f + System.lineSeparator());
                  allOk = false;
              }
          }

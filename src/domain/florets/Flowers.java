@@ -1,14 +1,14 @@
-package flowers.domain.florets;
+package domain.florets;
 
-import flowers.enums.Freshness;
+import enums.Freshness;
 
 public abstract class Flowers {
 
     protected String name;
-    protected Freshness freshness;
-    protected int stemLength;
-    protected int cost;
-    protected boolean inBouquet;
+    private Freshness freshness;
+    private int stemLength;
+    private int cost;
+    private boolean inBouquet;
 
     public Flowers(Freshness freshness, int stemLength, int cost) {
         this.freshness = freshness;
@@ -63,6 +63,6 @@ public abstract class Flowers {
                 ". Свежесть - " + freshness.getRussianFreshness() +
                 ", длинна стебля - " + stemLength +
                 " см, стоимость - " + cost +
-                " белорусских рубля.";
+                " бел. руб.";
     }
 }
