@@ -1,8 +1,6 @@
 package domain;
 
 import domain.florets.Flowers;
-import domain.florets.FlowersComparator;
-
 import java.util.Arrays;
 
 public class Bouquet {

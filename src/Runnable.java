@@ -11,10 +11,10 @@ public class Runnable {
 
         LoadData loadData = new LoadDataFakeImpl();
         Bouquet bouquet = loadData.loadBouquet();
-        BouquetService service = new BouquetServiceImpl();
         PrintBouquet.print(bouquet);
-
         System.out.println();
+
+        BouquetService service = new BouquetServiceImpl();
         service.sortByFreshness(bouquet);
         PrintBouquet.print(bouquet);
         System.out.println();
