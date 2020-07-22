@@ -2,7 +2,9 @@ package domain.florets;
 
 import enums.Freshness;
 
-public abstract class Flowers {
+import java.io.Serializable;
+
+public abstract class Flowers implements Serializable {
 
     protected String name;
     private Freshness freshness;

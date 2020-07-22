@@ -1,6 +1,8 @@
 package domain;
 
-public class PackingAccessory {
+import java.io.Serializable;
+
+public class PackingAccessory implements Serializable {
 
     private String name;
     private int minCapacity;

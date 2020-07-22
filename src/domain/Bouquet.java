@@ -1,9 +1,11 @@
 package domain;
 
 import domain.florets.Flowers;
+
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Bouquet {
+public class Bouquet implements Serializable {
 
     private PackingAccessory accessory;
     private Flowers[] flowers;
