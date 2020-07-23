@@ -6,13 +6,14 @@ import java.io.Serializable;
 
 public abstract class Flowers implements Serializable {
 
-    protected String name;
+    private String name;
     private Freshness freshness;
     private int stemLength;
     private int cost;
     private boolean inBouquet;
 
-    public Flowers(Freshness freshness, int stemLength, int cost) {
+    public Flowers(String name, Freshness freshness, int stemLength, int cost) {
+        this.name = name;
         this.freshness = freshness;
         this.stemLength = stemLength;
         this.cost = cost;

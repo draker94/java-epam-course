@@ -13,7 +13,7 @@ import static enums.Freshness.*;
 public class Runnable {
     public static void main(String[] args) {
 
-        Flowers rose = new Rose(NORMAL, 40, 2);
+        Flowers rose = new Rose(NORMAL, 40, 2, true);
         Flowers tulip = new Tulip(NORMAL, 44, 1);
         Flowers peony = new Peony(BEST, 50, 3);
         Flowers carnation = new Carnation(BAD, 34, 1);

@@ -17,7 +17,6 @@ public class SerializableDataImpl implements SerializableData {
 
     @Override
     public Bouquet loadBouquet(String relativePath) {
-
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(relativePath))) {
             return (Bouquet) inputStream.readObject();
         }
@@ -27,7 +26,4 @@ public class SerializableDataImpl implements SerializableData {
             return null;
         }
     }
-
-
-
 }
