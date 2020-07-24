@@ -8,15 +8,16 @@ import model.service.BouquetService;
 import model.service.BouquetServiceImpl;
 
 import static enums.Freshness.*;
+import static enums.TulipFlowerShape.*;
 
 
 public class Runnable {
     public static void main(String[] args) {
 
-        Flowers rose = new Rose(NORMAL, 40, 2, true);
-        Flowers tulip = new Tulip(NORMAL, 44, 1);
-        Flowers peony = new Peony(BEST, 50, 3);
-        Flowers carnation = new Carnation(BAD, 34, 1);
+        Flower rose = new Rose(NORMAL, 40, 2, true);
+        Flower tulip = new Tulip(NORMAL, 44, 1, GOBLET);
+        Flower peony = new Peony(BEST, 50, 3, 25);
+        Flower carnation = new Carnation(BAD, 34, 1, 1);
         PackingAccessory accessory = new PackingAccessory("Средняя упаковка", 3, 6);
         Bouquet bouquetSer = new Bouquet(accessory, rose, tulip, peony, carnation);
 

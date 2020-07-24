@@ -4,7 +4,7 @@ import enums.Freshness;
 
 import java.io.Serializable;
 
-public abstract class Flowers implements Serializable {
+public abstract class Flower implements Serializable {
 
     private String name;
     private Freshness freshness;
@@ -12,7 +12,7 @@ public abstract class Flowers implements Serializable {
     private int cost;
     private boolean inBouquet;
 
-    public Flowers(String name, Freshness freshness, int stemLength, int cost) {
+    public Flower(String name, Freshness freshness, int stemLength, int cost) {
         this.name = name;
         this.freshness = freshness;
         this.stemLength = stemLength;
@@ -63,7 +63,7 @@ public abstract class Flowers implements Serializable {
     @Override
     public String toString() {
         return "Цветок: " + name +
-                ". Свежесть - " + freshness.getRussianFreshness() +
+                ". Свежесть - " + freshness.getCyrillicFreshness() +
                 ", длинна стебля - " + stemLength +
                 " см, стоимость - " + cost +
                 " бел. руб.";

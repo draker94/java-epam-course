@@ -2,10 +2,20 @@ package domain.florets;
 
 import enums.Freshness;
 
-public class Carnation extends Flowers {
+public class Carnation extends Flower {
 
-    public Carnation(Freshness freshness, int stemLength, int cost) {
+    private int numberFlowersInBud;
+
+    public Carnation(Freshness freshness, int stemLength, int cost, int numberFlowersInBud) {
         super("Гвоздика", freshness, stemLength, cost);
+        this.numberFlowersInBud = numberFlowersInBud;
     }
 
+    public int getNumberFlowersInBud() {
+        return numberFlowersInBud;
+    }
+
+    public void setNumberFlowersInBud(int numberFlowersInBud) {
+        this.numberFlowersInBud = numberFlowersInBud;
+    }
 }

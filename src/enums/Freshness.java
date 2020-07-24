@@ -8,18 +8,18 @@ public enum Freshness {
     WORST(4, "отвратительная");
 
     private final int freshLevel;
-    private final String russianFreshness;
+    private final String cyrillicFreshness;
 
-    Freshness(int freshLevel, String russianFreshness) {
+    Freshness(int freshLevel, String cyrillicFreshness) {
         this.freshLevel = freshLevel;
-        this.russianFreshness = russianFreshness;
+        this.cyrillicFreshness = cyrillicFreshness;
     }
 
     public int getFreshLevel() {
         return freshLevel;
     }
 
-    public String getRussianFreshness() {
-        return russianFreshness;
+    public String getCyrillicFreshness() {
+        return cyrillicFreshness;
     }
 }

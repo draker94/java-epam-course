@@ -1,7 +1,7 @@
 package console;
 
 import domain.Bouquet;
-import domain.florets.Flowers;
+import domain.florets.Flower;
 
 public class PrintBouquet {
 
@@ -9,8 +9,8 @@ public class PrintBouquet {
         if (bouquet.getFlowers() == null) return;
         System.out.println(String.format("Букет упакованный в \"%s\". Цена - %d бел. руб. Внутри %d ед. цветов.",
                 bouquet.getAccessory().getName(), bouquet.getPrice(), bouquet.getFlowers().length));
-        for(Flowers f : bouquet.getFlowers()) {
-            System.out.println(f);
+        for(Flower f : bouquet.getFlowers()) {
+            PrintFlowerFullInfo.print(f);
         }
     }
 

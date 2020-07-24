@@ -1,6 +1,6 @@
 package domain;
 
-import domain.florets.Flowers;
+import domain.florets.Flower;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -8,15 +8,15 @@ import java.util.Arrays;
 public class Bouquet implements Serializable {
 
     private PackingAccessory accessory;
-    private Flowers[] flowers;
+    private Flower[] flowers;
     private int price;
 
-    public Bouquet(PackingAccessory accessory, Flowers... flowers) {
+    public Bouquet(PackingAccessory accessory, Flower... flowers) {
         if(check(accessory, flowers)) {
             accessory.setUse(true);
             this.accessory = accessory;
             this.flowers = Arrays.copyOf(flowers, flowers.length);
-            for(Flowers f : this.flowers) {
+            for(Flower f : this.flowers) {
                 f.setInBouquet(true);
                 this.price += f.getCost();
             }
@@ -35,11 +35,11 @@ public class Bouquet implements Serializable {
         this.accessory = accessory;
     }
 
-    public Flowers[] getFlowers() {
+    public Flower[] getFlowers() {
         return flowers;
     }
 
-    public void setFlowers(Flowers[] flowers) {
+    public void setFlowers(Flower[] flowers) {
         this.flowers = flowers;
     }
 
@@ -51,7 +51,7 @@ public class Bouquet implements Serializable {
         this.price = price;
     }
 
-     public boolean check(PackingAccessory accessory, Flowers... flowers) {
+     public boolean check(PackingAccessory accessory, Flower... flowers) {
          boolean allOk = true;
          if (flowers.length < accessory.getMinCapacity() || flowers.length > accessory.getMaxCapacity()) {
              System.out.println(String.format("Вы выбрали упаковочный аксессуар неподходящего размера." +
@@ -62,7 +62,7 @@ public class Bouquet implements Serializable {
              System.out.println("Данный аксессуар уже используется!");
              allOk = false;
          }
-         for (Flowers f : flowers) {
+         for (Flower f : flowers) {
              if (f.isInBouquet()) {
                  System.out.println("Цветок уже в другом букете, так не пойдёт! Удалите из заготовки букета: " + f + System.lineSeparator());
                  allOk = false;
